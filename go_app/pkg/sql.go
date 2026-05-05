@@ -11,7 +11,7 @@ import (
 func doSQL() {
 	username := "admin"
 	pass := "' OR 1=1--"
-	query := fmt.Sprintf("SELECT * FROM users WHERE username='%s' AND password='%s'", username, pass)
-	db, _ := sql.Open("mysql", "user:password@/dbname")
-	db.Exec(query)
+    query := "SELECT * FROM users WHERE username=? AND password=?"
+    db, _ := sql.Open("mysql", "user:password@/dbname")
+    db.Exec(query, username, pass)
 }
