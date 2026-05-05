@@ -1,4 +1,4 @@
-module github.com/kusari-oss/inspector-demo-vulnerable
+module github.com/funnelfiasco/inspector-demo
 
 go 1.19
 
